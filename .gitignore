@@ -2,3 +2,4 @@ FinanceApp/bin
 FinanceApp/obj
 .vs/
 .vs/FinanceApp/config/applicationhost.config
+FinanceApp/Data/TransactionData/*

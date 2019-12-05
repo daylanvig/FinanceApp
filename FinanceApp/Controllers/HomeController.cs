@@ -6,20 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FinanceApp.Models;
+using FinanceApp.Models.Services;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace FinanceApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment _env;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IWebHostEnvironment env)
         {
-            _logger = logger;
+            _env = env;
         }
 
         public IActionResult Index()
         {
+            var x = new DataLoadService(_env.ContentRootPath);
             return View();
         }
 
