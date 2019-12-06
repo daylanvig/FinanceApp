@@ -20,7 +20,6 @@ namespace FinanceApp
             using (var scope = host.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<DataContext>();
-                context.Database.EnsureCreated();
                 context.Database.Migrate();
             }
             host.Run();

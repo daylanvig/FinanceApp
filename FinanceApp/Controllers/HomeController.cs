@@ -23,7 +23,6 @@ namespace FinanceApp.Controllers
 
         public IActionResult Index()
         {
-            var x = new DataLoadService(_env.ContentRootPath);
             return View();
         }
 
