@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <Folder Include="ApplicationCore\Exceptions\" />
-    <Folder Include="Web\Components\" />
   </ItemGroup>
 
 </Project>

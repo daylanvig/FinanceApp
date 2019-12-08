@@ -9,6 +9,8 @@ using FinanceApp.Models;
 using FinanceApp.Models.Services;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using FinanceApp.Web.Interfaces;
+using FinanceApp.Web.PageModels;
 
 namespace FinanceApp.Controllers
 {
@@ -23,18 +25,7 @@ namespace FinanceApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new HomePageView());
         }
     }
 }

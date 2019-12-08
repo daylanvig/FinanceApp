@@ -12,9 +12,11 @@ namespace FinanceApp.Data
 
         protected readonly DataContext _dbContext;
 
+        private DbSet<T> _items;
         public Repository(DataContext dbContext)
         {
             _dbContext = dbContext;
+            _items = dbContext.Set<T>();
         }
         public virtual async Task<T> GetAsync(ISpecification<T> spec)
         {
@@ -22,12 +24,12 @@ namespace FinanceApp.Data
         }
         public virtual async Task<T> GetByIdAsync(int id)
         {
-            return await _dbContext.Set<T>().FindAsync(id);
+            return await _items.FindAsync(id);
         }
 
         public async Task<IReadOnlyList<T>> ListAllAsync()
         {
-            return await _dbContext.Set<T>().ToListAsync().ConfigureAwait(false);
+            return await _items.ToListAsync().ConfigureAwait(false);
         }
 
         public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec)
@@ -42,11 +44,12 @@ namespace FinanceApp.Data
 
         public async Task<T> AddAsync(T entity)
         {
-            await _dbContext.Set<T>().AddAsync(entity);
+            await _items.AddAsync(entity);
             await _dbContext.SaveChangesAsync().ConfigureAwait(false);
 
             return entity;
         }
+        
         public async Task<bool> AnyAsync(ISpecification<T> spec)
         {
             return await ApplySpecification(spec).AnyAsync();
@@ -59,7 +62,7 @@ namespace FinanceApp.Data
 
         public async Task DeleteAsync(T entity)
         {
-            _dbContext.Set<T>().Remove(entity);
+            _items.Remove(entity);
             await _dbContext.SaveChangesAsync().ConfigureAwait(false);
         }
 
