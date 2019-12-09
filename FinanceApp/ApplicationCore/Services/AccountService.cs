@@ -24,5 +24,12 @@ namespace FinanceApp.ApplicationCore.Services
             var accounts = await _repo.ListAsync(specification).ConfigureAwait(false);
             return accounts;
         }
+
+        public async Task<Account> LoadByID(int accountID)
+        {
+            var specification = new AccountTransactionLoadSpecification(accountID);
+            var account = await _repo.GetAsync(specification);
+            return account;
+        }
     } 
 }

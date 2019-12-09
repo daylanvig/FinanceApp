@@ -5,17 +5,17 @@
         @foreach (var account in Model.Accounts)
         {
             <tile size="12" parent>
-                <tile content-class="box">
-                    <div class="columns is-gapless is-mobile">
+                <tile content-class="box" colour="light" hover-colour="grey-lighter">
+                    <a class="columns is-gapless is-mobile" asp-controller="Accounts" asp-action="Edit" asp-route-id="@(account.Id)">
                         <div class="column is-4-desktop is-8-mobile">
-                            <h4 class="title is-4">@account.Name</h4>
-                            <h5 class="subtitle is-6">@account.Institution.Name</h5>
+                            <h2 class="title is-4">@account.Name</h2>
+                            <h3 class="subtitle is-6">@account.Institution.Name</h3>
                         </div>
-                        <div class="column is-hidden-mobile"></div>
+                        <div class="column is-hidden-mobile">@*Space columns out*@</div>
                         <div class="column is-1-desktop is-4-mobile">
                             <balance value="@account.Balance"></balance>
                         </div>
-                    </div>
+                    </a>
                 </tile>
             </tile>
         }

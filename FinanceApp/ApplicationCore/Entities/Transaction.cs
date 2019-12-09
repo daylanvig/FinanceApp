@@ -9,9 +9,10 @@ namespace FinanceApp.Models.Entities
 {
     public class Transaction : BaseEntity, ITransaction
     {
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime TransactionDate { get; set; }
         public string Description { get; set; }
-        [Required]
+        [Required, DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:c}")]
         public decimal Amount { get; set; }
         public int AccountId { get; set; }
         public Account Account { get; set; }

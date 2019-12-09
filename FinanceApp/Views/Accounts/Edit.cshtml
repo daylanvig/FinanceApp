@@ -1,0 +1,16 @@
+﻿@model FinanceApp.Web.PageModels.AccountDetailsView
+<h1 class="title is-1">@Model.Title</h1>
+<h2 class="subtitle is-2">Transactions</h2>
+<div class="tile is-ancestor">
+    <tile vertical colour="notification">
+        @foreach (var transaction in Model.Account.Transactions)
+        {
+            <tile parent size="12">
+                <tile content-class="box">
+                    @transaction.Description
+                    @transaction.Amount
+                </tile>
+            </tile>
+        }
+    </tile>
+</div>

@@ -16,7 +16,7 @@ namespace FinanceApp.Web.Components
             {
                 styleClass += " " + existingClasses.Value;
             }
-            styleClass += " has-text-right";
+            styleClass += " has-text-right is-size-5";
             output.Attributes.SetAttribute("class", styleClass);
         }
     }

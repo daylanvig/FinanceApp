@@ -17,12 +17,13 @@ namespace FinanceApp.Web.Components
         public bool IsVertical { get; set; }
         [HtmlAttributeName("parent")]
         public bool IsParent { get; set; }
-        public string Style { get; set; }
+        public string Colour { get; set; } // notification, info, message, success
         public string ContentClass { get; set; }
+        public string HoverColour { get; set; }
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             base.Process(context, output);
-            List<string> classes = new List<string>() { "tile" };
+            List<string> classes = new List<string>() { "tile", "component" };
             if (Size.HasValue)
             {
                 classes.Add($"is-{Size.Value}");
@@ -39,9 +40,13 @@ namespace FinanceApp.Web.Components
             {
                 classes.Add("is-vertical");
             }
-            if(Style != null)
+            if(Colour != null)
             {
-                classes.Add($"is-{Style}");
+                classes.Add($"has-background-{Colour}");
+            }
+            if(HoverColour != null)
+            {
+                classes.Add($"has-background-{HoverColour}--hover");
             }
             output.Attributes.SetAttribute("class", string.Join(' ', classes));
             output.TagName = "div";

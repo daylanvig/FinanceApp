@@ -3,3 +3,4 @@ FinanceApp/obj
 .vs/
 .vs/FinanceApp/config/applicationhost.config
 FinanceApp/Data/TransactionData/*
+FinanceApp/Web/node_modules/*

@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@(((FinanceApp.Web.Interfaces.IPage)ViewData.Model).Title) - FinanceApp</title>
-    <link rel="stylesheet" href="./lib/bulma.css">
+    <link rel="stylesheet" href="~/lib/bulma.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/site.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script defer src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script defer src="~/js/main.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </head>
 <body>
@@ -22,14 +23,14 @@
         </div>
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a navbar-item asp-controller="FinancialInstitutions">Financial Institutions</a>
-                <a navbar-item asp-controller="Accounts">Accounts</a>
+                <a navbar-item controller="FinancialInstitutions">Financial Institutions</a>
+                <a navbar-item controller="Accounts">Accounts</a>
             </div>
         </div>
     </nav>
 
     <main class="section">
-        <div class="container">
+        <div class="container" id="contentArea">
             @RenderBody()
         </div>
     </main>
