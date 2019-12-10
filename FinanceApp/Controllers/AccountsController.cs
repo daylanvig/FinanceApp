@@ -23,17 +23,15 @@ namespace FinanceApp.Controllers
 
         public async Task<ViewResult> Index()
         {
-            var accounts = await new AccountService(_DAL).LoadAccounts();
-            var page = new AccountListView(accounts);
-            return View(page);
+            return View(await new AccountService(_DAL).GetView());
         }
 
         [HttpGet]
         public async Task<ViewResult> Edit(int id)
         {
-            var account = await new AccountService(_DAL).LoadByID(id);
-            var page = new AccountDetailsView(account);
-            return View(page);
+
+            return View(await new AccountService(_DAL).GetView(id));
         }
+        
     }
 }

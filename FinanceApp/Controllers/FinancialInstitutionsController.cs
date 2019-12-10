@@ -44,7 +44,7 @@ namespace FinanceApp.Controllers
         }
 
         // POST: /FinancialInstitutions/5
-        [HttpPost, ActionName("Edit")]
+        [HttpPost]
         public async Task<IActionResult> EditPost(int id, [FromForm] FinancialInstitutionDTO financialInstitution)
         {
             if (ModelState.IsValid)
