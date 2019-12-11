@@ -6,7 +6,7 @@
         {
             <tile size="12" parent>
                 <tile content-class="box" colour="light" hover-colour="grey-lighter">
-                    <a class="columns is-gapless is-mobile" asp-controller="Accounts" asp-action="Edit" asp-route-id="@(account.Id)">
+                    <a class="columns is-gapless is-mobile" asp-route-id="@account.Id" asp-action="Index">
                         <div class="column is-4-desktop is-8-mobile">
                             <h2 class="title is-4">@account.Name</h2>
                             <h3 class="subtitle is-6">@account.Institution.Name</h3>

@@ -36,16 +36,16 @@ namespace FinanceApp.Controllers
         }
 
         // GET: /FinancialInstitutions/5
-        [HttpGet]
+        [HttpGet("/{id}")]
         public async Task<JsonResult> Edit(int id)
         {
             var institution = await _DAL.GetByIdAsync(id).ConfigureAwait(false);
             return Json(institution);
         }
 
-        // POST: /FinancialInstitutions/5
-        [HttpPost]
-        public async Task<IActionResult> EditPost(int id, [FromForm] FinancialInstitutionDTO financialInstitution)
+        // Put: /FinancialInstitutions/5
+        [HttpPut("/{id}")] 
+        public async Task<IActionResult> Edit(int id, [FromForm] FinancialInstitutionDTO financialInstitution)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +58,8 @@ namespace FinanceApp.Controllers
             return View(financialInstitution);
         }
 
-        // PUT: /FinancialInstitutions/5
-        [HttpPut]
+        // POST: /FinancialInstitutions/
+        [HttpPost("/")]
         public async Task<IActionResult> Create([FromForm] FinancialInstitutionDTO financialInstitution)
         {
             if (ModelState.IsValid)
@@ -74,7 +74,7 @@ namespace FinanceApp.Controllers
         }
 
         // DELETE: /FinancialInstitutions/5
-        [HttpDelete]
+        [HttpDelete("/{id}")]
         public async Task Delete(int id)
         {
             await _institutionService.DeleteByID(id);

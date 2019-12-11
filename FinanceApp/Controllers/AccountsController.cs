@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FinanceApp.ApplicationCore.DTOS;
 using FinanceApp.ApplicationCore.Services;
 using FinanceApp.Data;
 using FinanceApp.Models.Entities;
@@ -20,17 +21,21 @@ namespace FinanceApp.Controllers
             _DAL = new Repository<Account>(context);
         }
 
-
+        [HttpGet("/Accounts/")]
         public async Task<ViewResult> Index()
         {
             return View(await new AccountService(_DAL).GetView());
         }
 
-        [HttpGet]
-        public async Task<ViewResult> Edit(int id)
+        [HttpGet, ActionName("Details")]
+        public async Task<ViewResult> DetailView(int id)
         {
-
             return View(await new AccountService(_DAL).GetView(id));
+        }
+        [HttpPut]
+        public async Task<JsonResult> AddTransactions([FromForm] AccountTransactionDTO transactionData)
+        {
+            throw new NotImplementedException();
         }
         
     }

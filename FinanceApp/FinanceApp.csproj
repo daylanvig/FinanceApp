@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="ApplicationCore\Exceptions\" />
+    <Folder Include="Views\Transactions\" />
   </ItemGroup>
 
 </Project>
