@@ -1,5 +1,8 @@
-﻿@model FinanceApp.Web.PageModels.AccountDetailsView
-<h1 class="title is-1">@Model.Title</h1>
+﻿@model FinanceApp.Web.ViewModels.AccountDetailsView
+@{ 
+    ViewData["Title"] = $"Account Details - {Model.Account.Name}";
+}
+<h1 class="title is-1">@ViewData["Title"]</h1>
 <h2 class="subtitle is-2">Transactions</h2>
 <div class="tile is-ancestor">
     <tile vertical colour="notification">

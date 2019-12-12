@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using FinanceApp.Models;
-using FinanceApp.Models.Services;
-using System.IO;
+﻿using FinanceApp.Web.ViewModels;
 using Microsoft.AspNetCore.Hosting;
-using FinanceApp.Web.Interfaces;
-using FinanceApp.Web.PageModels;
+using Microsoft.AspNetCore.Mvc;
 
-namespace FinanceApp.Controllers
+namespace FinanceApp.Web.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
+using FinanceApp.ApplicationCore.DTOS;
+using FinanceApp.ApplicationCore.Entities;
 using FinanceApp.Data;
-using FinanceApp.Models.DTOS;
-using FinanceApp.Models.Entities;
-using FinanceApp.Models.Interfaces;
+using FinanceApp.Infrastructure.Data;
 using FinanceApp.Models.Services;
-using FinanceApp.Web;
-using FinanceApp.Web.PageModels;
-using Microsoft.AspNetCore.Http;
+using FinanceApp.Web.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
-namespace FinanceApp.Controllers
+namespace FinanceApp.Web.Controllers
 {
     public class FinancialInstitutionsController : Controller
     {

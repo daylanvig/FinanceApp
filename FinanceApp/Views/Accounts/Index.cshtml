@@ -1,5 +1,8 @@
-﻿@model FinanceApp.Web.PageModels.AccountListView
-<h1 class="title is-1">@Model.Title</h1>
+﻿@model FinanceApp.Web.ViewModels.AccountListView
+@{
+    ViewData["Title"] = "Accounts";
+}
+<h1 class="title is-1">@ViewData["Title"]</h1>
 <div class="tile is-ancestor">
     <tile vertical>
         @foreach (var account in Model.Accounts)

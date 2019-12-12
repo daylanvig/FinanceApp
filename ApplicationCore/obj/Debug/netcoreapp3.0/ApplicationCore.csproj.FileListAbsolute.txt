@@ -1,0 +1,5 @@
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\bin\Debug\netcoreapp3.0\ApplicationCore.deps.json
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\bin\Debug\netcoreapp3.0\ApplicationCore.dll
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.csprojAssemblyReference.cache
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.AssemblyInfo.cs
