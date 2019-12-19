@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FinanceApp.ApplicationCore.Interfaces;
 using FinanceApp.Data;
+using FinanceApp.Infrastructure.Data;
+using FinanceApp.Web.Interfaces;
+using FinanceApp.Web.Services;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,10 +33,10 @@ namespace FinanceApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DataContext>(o => o.UseMySql(Configuration.GetConnectionString("Data")));
-            services.AddAutoMapper(typeof(FinanceApp.Maps.FinancialInstitutionMappingProfile).Assembly);
+            services.AddDbContext<DataContext>(o => o.UseMySql(Configuration.GetConnectionString("Data"))); 
+            services.AddAutoMapper(typeof(ApplicationCore.Maps.FinancialInstitutionMappingProfile).Assembly);
         }
-
+        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

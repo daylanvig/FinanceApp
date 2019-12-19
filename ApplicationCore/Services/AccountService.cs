@@ -26,5 +26,6 @@ namespace FinanceApp.ApplicationCore.Services
             var account = await _repo.GetAsync(specification);
             return account;
         }
+
     } 
 }

@@ -8,6 +8,7 @@ using FinanceApp.Infrastructure.Data;
 using FinanceApp.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FinanceApp.Web.Controllers
@@ -15,7 +16,7 @@ namespace FinanceApp.Web.Controllers
     public class AccountsController : Controller
     {
         private IAsyncRepository<Account> _DAL;
-        public AccountsController(DataContext context, IMapper mapper)
+        public AccountsController(DataContext context)
         {
             _DAL = new Repository<Account>(context);
         }
@@ -32,22 +33,5 @@ namespace FinanceApp.Web.Controllers
             return View(await new AccountViewModelService(_DAL).GetView(id));
         }
 
-        [HttpPut, ActionName("Transactions")]
-        public async Task<JsonResult> AddTransactions([FromForm] AccountTransactionDTO transactionData)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost, ActionName("Transactions")]
-        public async Task<JsonResult> EditTransaction(int id, [FromForm] TransactionDTO transaction)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpDelete, ActionName("Transactions")]
-        public async Task DeleteTransaction(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

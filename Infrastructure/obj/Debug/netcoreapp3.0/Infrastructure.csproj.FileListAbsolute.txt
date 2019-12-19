@@ -4,3 +4,5 @@ C:\Users\dayla\source\repos\FinanceApp\Infrastructure\obj\Debug\netcoreapp3.0\In
 C:\Users\dayla\source\repos\FinanceApp\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfoInputs.cache
 C:\Users\dayla\source\repos\FinanceApp\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfo.cs
 C:\Users\dayla\source\repos\FinanceApp\Infrastructure\bin\Debug\netcoreapp3.0\ApplicationCore.dll
+C:\Users\dayla\source\repos\FinanceApp\Infrastructure\bin\Debug\netcoreapp3.0\ApplicationCore.pdb
+C:\Users\dayla\source\repos\FinanceApp\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CopyComplete

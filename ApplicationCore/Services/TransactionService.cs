@@ -1,5 +1,9 @@
-﻿using FinanceApp.ApplicationCore.Entities;
+﻿using FinanceApp.ApplicationCore.DTOS;
+using FinanceApp.ApplicationCore.Entities;
 using FinanceApp.ApplicationCore.Interfaces;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FinanceApp.ApplicationCore.Services
 {
@@ -10,7 +14,10 @@ namespace FinanceApp.ApplicationCore.Services
         {
             _repository = repository;
         }
+        public async Task AddTransactions(int accountID, IEnumerable<TransactionDTO> transactions)
+        {
 
+        }
    
     }
 }

@@ -3,10 +3,11 @@ using FinanceApp.ApplicationCore.Interfaces;
 using FinanceApp.ApplicationCore.Services;
 using FinanceApp.Web.ViewModels;
 using System.Threading.Tasks;
+using FinanceApp.Web.Interfaces;
 
 namespace FinanceApp.Web.Services
 {
-    public class AccountViewModelService
+    public class AccountViewModelService : IAccountViewModelService
     {
         private IAsyncRepository<Account> _repo;
         public AccountViewModelService(IAsyncRepository<Account> repo)

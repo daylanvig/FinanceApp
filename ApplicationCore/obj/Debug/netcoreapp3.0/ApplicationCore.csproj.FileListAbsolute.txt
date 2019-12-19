@@ -3,3 +3,6 @@ C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\bin\Debug\netcoreapp3.0\A
 C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.csprojAssemblyReference.cache
 C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.AssemblyInfoInputs.cache
 C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.AssemblyInfo.cs
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\bin\Debug\netcoreapp3.0\ApplicationCore.pdb
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.dll
+C:\Users\dayla\source\repos\FinanceApp\ApplicationCore\obj\Debug\netcoreapp3.0\ApplicationCore.pdb
