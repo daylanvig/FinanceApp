@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 
-namespace FinanceApp.Web
+namespace FinanceApp.Web.HelperMethods
 {
     public static class ModelStateExtensions
     {

@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using System.Linq;
+using System.Text.Encodings.Web;
 
 namespace FinanceApp.Web.Components
 {
@@ -13,7 +15,7 @@ namespace FinanceApp.Web.Components
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             base.Process(context, output);
-            output.Attributes.SetAttribute("class", "navbar-item");
+            output.AddClass("navbar-item", HtmlEncoder.Default);
             output.Attributes.Remove(output.Attributes.First(a => a.Name == "navbar-item"));
             output.Attributes.SetAttribute("href", $"/{Controller}/");
         }

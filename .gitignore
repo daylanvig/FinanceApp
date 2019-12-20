@@ -1,6 +1,13 @@
 FinanceApp/bin
 FinanceApp/obj
+Infrastructure/obj
+Infrastructure/Migrations
+ApplicationCore/bin
+ApplicationCore/obj
+FinanceApp/ClientSide/node_modules/*
 .vs/
 .vs/FinanceApp/config/applicationhost.config
 FinanceApp/Data/TransactionData/*
 FinanceApp/Web/node_modules/*
+Infrastructure/obj/Debug/netcoreapp3.0/Infrastructure.csproj.FileListAbsolute.txt
+Infrastructure/obj/Debug/netcoreapp3.0/Infrastructure.csprojAssemblyReference.cache

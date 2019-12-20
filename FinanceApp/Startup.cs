@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using FinanceApp.ApplicationCore.Entities;
 using FinanceApp.ApplicationCore.Interfaces;
 using FinanceApp.Data;
 using FinanceApp.Infrastructure.Data;
@@ -33,8 +34,9 @@ namespace FinanceApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DataContext>(o => o.UseMySql(Configuration.GetConnectionString("Data"))); 
+            services.AddDbContext<DataContext>(o => o.UseMySql(Configuration.GetConnectionString("Data"), cfg => cfg.MigrationsAssembly("Infrastructure"))); 
             services.AddAutoMapper(typeof(ApplicationCore.Maps.FinancialInstitutionMappingProfile).Assembly);
+            services.AddScoped(typeof(Repository<>));
         }
         
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

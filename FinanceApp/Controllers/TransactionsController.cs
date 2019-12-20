@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FinanceApp.ApplicationCore.DTOS;
+using FinanceApp.ApplicationCore.Entities;
+using FinanceApp.ApplicationCore.Interfaces;
+using FinanceApp.Data;
+using FinanceApp.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,24 +16,17 @@ namespace Web.Controllers
     [Route("api/[controller]")]
     public class TransactionsController : Controller
     {
-        // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly IAsyncRepository<Transaction> _repo;
+        public TransactionsController(Repository<Transaction> repo)
         {
-            return new string[] { "value1", "value2" };
+            _repo = repo;
         }
-
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post(int id, [FromBody] IReadOnlyList<TransactionDTO> transactions)
         {
+
+            return Ok(); 
         }
 
         // PUT api/<controller>/5
